@@ -18,6 +18,25 @@ public class UserActivityDto {
 	
 	String reponsedata;
 	
+	String resolution;
+	
+	String lat;
+	
+	String lng;
+	
+	String ip;
+	
+	String devicetype;
+	
+	String duration;
+	
+	String username;
+	
+	String projectname;
+	
+	String browserUrl;
+	
+	
 	public String getUrl() {
 		return url;
 	}
@@ -69,6 +88,68 @@ public class UserActivityDto {
 	public void setPageview(String pageview) {
 		this.pageview = pageview;
 	}
-	
+	public String getResolution() {
+		return resolution;
+	}
 
+	public void setResolution(String resolution) {
+		this.resolution = resolution;
+	}
+	public String getLat() {
+		return lat;
+	}
+
+	public void setLat(String lat) {
+		this.lat = lat;
+	}
+	public String getLng() {
+		return lng;
+	}
+
+	public void setLng(String lng) {
+		this.lng = lng;
+	}
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
+	}
+	public String getDevicetype() {
+		return devicetype;
+	}
+
+	public void setDevicetype(String devicetype) {
+		this.devicetype = devicetype;
+	}
+	public String getDuration() {
+		return duration;
+	}
+
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getProjectname() {
+		return projectname;
+	}
+
+	public void setProjectname(String projectname) {
+		this.projectname = projectname;
+	}
+	public String getBrowserUrl() {
+		return browserUrl;
+	}
+
+	public void setBrowserUrl(String browserUrl) {
+		this.browserUrl = browserUrl;
+	}
+	
 }

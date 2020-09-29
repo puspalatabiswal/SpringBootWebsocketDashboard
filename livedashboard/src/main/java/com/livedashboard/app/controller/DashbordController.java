@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.livedashboard.app.controller.service.LiveDasbhordService;
 import com.livedashboard.app.dto.UserActivityDto;
+import com.livedashboard.app.util.HttpReqUtils;
 
 @RestController
 public class DashbordController {
@@ -33,8 +34,9 @@ public class DashbordController {
 		 * 
 		 * 
 		 * */
-			HashMap<String, List<UserActivityDto>> responseDataFrame=liveDasbhordService.dataFormationForLiveDashboard(userActivityDto);
-		    
+		userActivityDto.setIp(HttpReqUtils.getClientIpAddressIfServletRequestExist());
+		HashMap<String, List<UserActivityDto>> responseDataFrame=liveDasbhordService.dataFormationForLiveDashboard(userActivityDto);
+	    
 			
 			webSocket.convertAndSend(topic,responseDataFrame );
 		
